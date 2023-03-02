@@ -58,3 +58,12 @@ Vector products:
 b*c
 sum(b*c)
 ```
+
+Central tendency:
+
+```{r}
+mean(b)
+median(b)
+min(b)
+max(b)
+```
