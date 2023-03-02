@@ -139,4 +139,5 @@ Plotting:
 ```{r}
 U = rnorm(1000)
 plot(U)
+plot(U, xlab="index")
 ```
