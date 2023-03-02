@@ -1920,8 +1920,50 @@ B = matrix(1:9, 3, 3)
 B = matrix(1:9, 3, 3, byrow=TRUE)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Accessing matrix:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQlsyLDJdXG5gYGAifQ== -->
+<pre class="r"><code>B[2,2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDVcbiJ9 -->
+<pre><code>[1] 5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGlhZyhCKVxuYGBgIn0= -->
+<pre class="r"><code>diag(B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgNSA5XG4ifQ== -->
+<pre><code>[1] 1 5 9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQlsxLF1cbmBgYCJ9 -->
+<pre class="r"><code>B[1,]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzXG4ifQ== -->
+<pre><code>[1] 1 2 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQlssMl1cbmBgYCJ9 -->
+<pre class="r"><code>B[,2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIgNSA4XG4ifQ== -->
+<pre><code>[1] 2 5 8</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZGV0KEIpXG5gYGAifQ== -->
+<pre class="r"><code>det(B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC05LjUxNjE5N2UtMTZcbiJ9 -->
+<pre><code>[1] -9.516197e-16</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29sdmUoQilcbmBgYCJ9 -->
+<pre class="r"><code>solve(B)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gc29sdmUuZGVmYXVsdChCKSA6IFxuICBzeXN0ZW0gaXMgY29tcHV0YXRpb25hbGx5IHNpbmd1bGFyOiByZWNpcHJvY2FsIGNvbmRpdGlvbiBudW1iZXIgPSAzLjcwMDc0ZS0xOFxuIn0= -->
+<pre><code>Error in solve.default(B) : 
+  system is computationally singular: reciprocal condition number = 3.70074e-18</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAK</div>
 
 
 
