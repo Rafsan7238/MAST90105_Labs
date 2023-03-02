@@ -51,3 +51,10 @@ Vector mathematics:
 b^2
 sin(b)
 ```
+
+Vector products:
+
+```{r}
+b*c
+sum(b*c)
+```
