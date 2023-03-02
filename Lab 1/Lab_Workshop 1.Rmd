@@ -162,3 +162,20 @@ sq1(-2)
 ```{r}
 sq1 = function(x) return(x*abs(x))
 ```
+
+More functions:
+
+```{r}
+sq2 = function(x,y) return(x*y)
+sq2(3,4)
+```
+
+```{r}
+sq3 = function(x,y) {
+  v1 = x*y
+  v2 = x^2+y^2
+  return(c(v1,v2))
+}
+
+sq3(2,3)
+```
