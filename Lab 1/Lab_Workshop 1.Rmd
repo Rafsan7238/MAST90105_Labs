@@ -37,3 +37,9 @@ exp(1)
 pi
 4*atan(1)
 ```
+
+Concatenate vectors:
+
+```{r}
+ab = c(a,b)
+```
