@@ -43,3 +43,11 @@ Concatenate vectors:
 ```{r}
 ab = c(a,b)
 ```
+
+Vector mathematics:
+
+```{r}
+2*b
+b^2
+sin(b)
+```
