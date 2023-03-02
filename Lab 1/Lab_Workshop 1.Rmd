@@ -133,3 +133,10 @@ apply(C,2,sort)
 apply(C, 1, sort)
 t(apply(C, 1, sort))
 ```
+
+Plotting:
+
+```{r}
+U = rnorm(1000)
+plot(U)
+```
