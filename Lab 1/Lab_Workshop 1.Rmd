@@ -158,3 +158,7 @@ sq1 = function(x){
 ```{r}
 sq1(-2)
 ```
+
+```{r}
+sq1 = function(x) return(x*abs(x))
+```
