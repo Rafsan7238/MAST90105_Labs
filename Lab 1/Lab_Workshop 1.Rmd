@@ -87,3 +87,10 @@ B[,2]
 det(B)
 solve(B)
 ```
+
+Element-wise addition:
+
+```{r}
+C = diag(c(1,1,1))
+solve(B+C)
+```

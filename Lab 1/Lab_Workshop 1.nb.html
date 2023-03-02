@@ -1962,8 +1962,23 @@ B = matrix(1:9, 3, 3, byrow=TRUE)</code></pre>
   system is computationally singular: reciprocal condition number = 3.70074e-18</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Element-wise addition:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuQyA9IGRpYWcoYygxLDEsMSkpXG5zb2x2ZShCK0MpXG5gYGAifQ== -->
+<pre class="r"><code>C = diag(c(1,1,1))
+solve(B+C)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gICAgICAgICAgWywzXVxuWzEsXSAgIC02IC0yLjAgIDMuMDAwMDAwZSswMFxuWzIsXSAgIC0xICAwLjUgIDIuMjIwNDQ2ZS0xN1xuWzMsXSAgICA1ICAxLjAgLTIuMDAwMDAwZSswMFxuIn0= -->
+<pre><code>     [,1] [,2]          [,3]
+[1,]   -6 -2.0  3.000000e+00
+[2,]   -1  0.5  2.220446e-17
+[3,]    5  1.0 -2.000000e+00</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAKCkVsZW1lbnQtd2lzZSBhZGRpdGlvbjoKCmBgYHtyfQpDID0gZGlhZyhjKDEsMSwxKSkKc29sdmUoQitDKQpgYGAK</div>
 
 
 
