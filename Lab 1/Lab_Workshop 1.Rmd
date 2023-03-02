@@ -94,3 +94,12 @@ Element-wise addition:
 C = diag(c(1,1,1))
 solve(B+C)
 ```
+
+Range extract:
+
+```{r}
+d[c(3,4,5,6)]
+d[3:6]
+d[-1]
+d[-(1:2)]
+```

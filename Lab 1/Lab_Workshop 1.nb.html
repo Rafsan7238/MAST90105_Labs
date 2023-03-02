@@ -1977,8 +1977,37 @@ solve(B+C)</code></pre>
 [3,]    5  1.0 -2.000000e+00</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Range extract:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZFtjKDMsNCw1LDYpXVxuYGBgIn0= -->
+<pre class="r"><code>d[c(3,4,5,6)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIuMCAyLjUgMy4wIDMuNVxuIn0= -->
+<pre><code>[1] 2.0 2.5 3.0 3.5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZFszOjZdXG5gYGAifQ== -->
+<pre class="r"><code>d[3:6]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIuMCAyLjUgMy4wIDMuNVxuIn0= -->
+<pre><code>[1] 2.0 2.5 3.0 3.5</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZFstMV1cbmBgYCJ9 -->
+<pre class="r"><code>d[-1]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEuNSAyLjAgMi41IDMuMCAzLjUgNC4wIDQuNSA1LjBcbiJ9 -->
+<pre><code>[1] 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZFstKDE6MildXG5gYGAifQ== -->
+<pre class="r"><code>d[-(1:2)]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDIuMCAyLjUgMy4wIDMuNSA0LjAgNC41IDUuMFxuIn0= -->
+<pre><code>[1] 2.0 2.5 3.0 3.5 4.0 4.5 5.0</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAKCkVsZW1lbnQtd2lzZSBhZGRpdGlvbjoKCmBgYHtyfQpDID0gZGlhZyhjKDEsMSwxKSkKc29sdmUoQitDKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAKCkVsZW1lbnQtd2lzZSBhZGRpdGlvbjoKCmBgYHtyfQpDID0gZGlhZyhjKDEsMSwxKSkKc29sdmUoQitDKQpgYGAKClJhbmdlIGV4dHJhY3Q6CgpgYGB7cn0KZFtjKDMsNCw1LDYpXQpkWzM6Nl0KZFstMV0KZFstKDE6MildCmBgYAo=</div>
 
 
 
