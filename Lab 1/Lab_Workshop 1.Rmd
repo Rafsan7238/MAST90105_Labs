@@ -145,3 +145,16 @@ plot(U, xlab="index")
 ```{r}
 plot(U, xlab="index", main="plot1")
 ```
+
+Creating custom functions:
+
+```{r}
+sq1 = function(x){
+  out = x*abs(x)
+  out
+}
+```
+
+```{r}
+sq1(-2)
+```
