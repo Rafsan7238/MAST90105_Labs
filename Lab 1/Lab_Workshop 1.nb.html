@@ -2071,8 +2071,53 @@ B*C</code></pre>
 <pre><code>[1] 9</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Sorting:</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA9IGMoMSwtNSwzKVxuc29ydChhKVxuYGBgIn0= -->
+<pre class="r"><code>a = c(1,-5,3)
+sort(a)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIC01ICAxICAzXG4ifQ== -->
+<pre><code>[1] -5  1  3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc29ydChDKVxuYGBgIn0= -->
+<pre class="r"><code>sort(C)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEgMiAzIDQgNSA2IDcgOCA5XG4ifQ== -->
+<pre><code>[1] 1 2 3 4 5 6 7 8 9</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXBwbHkoQywyLHNvcnQpXG5gYGAifQ== -->
+<pre class="r"><code>apply(C,2,sort)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICA3ICAgIDQgICAgMVxuWzIsXSAgICA4ICAgIDUgICAgMlxuWzMsXSAgICA5ICAgIDYgICAgM1xuIn0= -->
+<pre><code>     [,1] [,2] [,3]
+[1,]    7    4    1
+[2,]    8    5    2
+[3,]    9    6    3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYXBwbHkoQywgMSwgc29ydClcbmBgYCJ9 -->
+<pre class="r"><code>apply(C, 1, sort)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAzICAgIDIgICAgMVxuWzIsXSAgICA2ICAgIDUgICAgNFxuWzMsXSAgICA5ICAgIDggICAgN1xuIn0= -->
+<pre><code>     [,1] [,2] [,3]
+[1,]    3    2    1
+[2,]    6    5    4
+[3,]    9    8    7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudChhcHBseShDLCAxLCBzb3J0KSlcbmBgYCJ9 -->
+<pre class="r"><code>t(apply(C, 1, sort))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAgICBbLDFdIFssMl0gWywzXVxuWzEsXSAgICAzICAgIDYgICAgOVxuWzIsXSAgICAyICAgIDUgICAgOFxuWzMsXSAgICAxICAgIDQgICAgN1xuIn0= -->
+<pre><code>     [,1] [,2] [,3]
+[1,]    3    6    9
+[2,]    2    5    8
+[3,]    1    4    7</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAKCkVsZW1lbnQtd2lzZSBhZGRpdGlvbjoKCmBgYHtyfQpDID0gZGlhZyhjKDEsMSwxKSkKc29sdmUoQitDKQpgYGAKClJhbmdlIGV4dHJhY3Q6CgpgYGB7cn0KZFtjKDMsNCw1LDYpXQpkWzM6Nl0KZFstMV0KZFstKDE6MildCmBgYAoKTWF0cml4IG11bHRpcGxpY2F0aW9uOgoKYGBge3J9CkMgPSBtYXRyaXgoOToxLDMsMykKQipDCkIlKiVDCmBgYAoKTW9yZSBtYXRyaXggZnVuY3Rpb25zOgoKYGBge3J9Cm1lYW4oQikKZGltKEIpCm5jb2woQikKbnJvdyhCKQpwcm9kKEIpCmxlbmd0aChCKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIGFuZCBXb3Jrc2hvcCAxIgpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sKLS0tCgpUYWtpbmcgaGVscCBmcm9tIFJTdHVkaW8gZm9yIHVua25vd24gZm9ybXVsYToKCmBgYHtyfQo/ZG5vcm0KYGBgCgpDcmVhdGluZyB2YXJpYWJsZXM6CgpgYGB7cn0KYTwtMQpiID0gMgpgYGAKCkNyZWF0aW5nIHZlY3RvcnM6CgpgYGB7cn0KYiA9IGMoMSwyLDMpCmMgPSAxOjMKZCA9IHNlcSgxLDUsMC41KQplID0gcmVwKDMsNykKYGBgCgpBcml0aG1ldGljIG9wZXJhdGlvbnM6CgpgYGB7cn0KMSoyKjMKMS8yLzMKMioqMwoyXjEuNQpsb2coMTIpCmV4cCgxKQpwaQo0KmF0YW4oMSkKYGBgCgpDb25jYXRlbmF0ZSB2ZWN0b3JzOgoKYGBge3J9CmFiID0gYyhhLGIpCmBgYAoKVmVjdG9yIG1hdGhlbWF0aWNzOgoKYGBge3J9CjIqYgpiXjIKc2luKGIpCmBgYAoKVmVjdG9yIHByb2R1Y3RzOgoKYGBge3J9CmIqYwpzdW0oYipjKQpgYGAKCkNlbnRyYWwgdGVuZGVuY3k6CgpgYGB7cn0KbWVhbihiKQptZWRpYW4oYikKbWluKGIpCm1heChiKQpgYGAKCk1hdHJpeDoKCmBgYHtyfQpCID0gbWF0cml4KG5jb2w9MywgbnJvdz0zKQpCID0gbWF0cml4KDAsIDMsIDMpCkIgPSBtYXRyaXgoMTo5LCAzLCAzKQpCID0gbWF0cml4KDE6OSwgMywgMywgYnlyb3c9VFJVRSkKYGBgCgpBY2Nlc3NpbmcgbWF0cml4OgoKYGBge3J9CkJbMiwyXQpkaWFnKEIpCkJbMSxdCkJbLDJdCmRldChCKQpzb2x2ZShCKQpgYGAKCkVsZW1lbnQtd2lzZSBhZGRpdGlvbjoKCmBgYHtyfQpDID0gZGlhZyhjKDEsMSwxKSkKc29sdmUoQitDKQpgYGAKClJhbmdlIGV4dHJhY3Q6CgpgYGB7cn0KZFtjKDMsNCw1LDYpXQpkWzM6Nl0KZFstMV0KZFstKDE6MildCmBgYAoKTWF0cml4IG11bHRpcGxpY2F0aW9uOgoKYGBge3J9CkMgPSBtYXRyaXgoOToxLDMsMykKQipDCkIlKiVDCmBgYAoKTW9yZSBtYXRyaXggZnVuY3Rpb25zOgoKYGBge3J9Cm1lYW4oQikKZGltKEIpCm5jb2woQikKbnJvdyhCKQpwcm9kKEIpCmxlbmd0aChCKQpgYGAKClNvcnRpbmc6CgpgYGB7cn0KYSA9IGMoMSwtNSwzKQpzb3J0KGEpCnNvcnQoQykKYXBwbHkoQywyLHNvcnQpCmFwcGx5KEMsIDEsIHNvcnQpCnQoYXBwbHkoQywgMSwgc29ydCkpCmBgYAo=</div>
 
 
 

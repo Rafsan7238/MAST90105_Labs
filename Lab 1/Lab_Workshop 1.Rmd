@@ -122,3 +122,14 @@ nrow(B)
 prod(B)
 length(B)
 ```
+
+Sorting:
+
+```{r}
+a = c(1,-5,3)
+sort(a)
+sort(C)
+apply(C,2,sort)
+apply(C, 1, sort)
+t(apply(C, 1, sort))
+```
