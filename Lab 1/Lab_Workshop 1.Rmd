@@ -141,3 +141,7 @@ U = rnorm(1000)
 plot(U)
 plot(U, xlab="index")
 ```
+
+```{r}
+plot(U, xlab="index", main="plot1")
+```
