@@ -8,3 +8,10 @@ Taking help from RStudio for unknown formula:
 ```{r}
 ?dnorm
 ```
+
+Creating variables:
+
+```{r}
+a<-1
+b = 2
+```
