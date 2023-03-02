@@ -67,3 +67,12 @@ median(b)
 min(b)
 max(b)
 ```
+
+Matrix:
+
+```{r}
+B = matrix(ncol=3, nrow=3)
+B = matrix(0, 3, 3)
+B = matrix(1:9, 3, 3)
+B = matrix(1:9, 3, 3, byrow=TRUE)
+```
