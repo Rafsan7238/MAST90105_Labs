@@ -3,6 +3,17 @@ title: "Lab 2: Calculating Probabilities and Plotting Distributions"
 output: html_notebook
 ---
 
+Task 1b:
+
+Total lines of codes: 10000
+
+Improvable: 30
+
+Sample size: 10
+
 ```{r}
-plot(cars)
+x = 0:10
+prob = dhyper(x, 30, 9970, 10)
+print(prob)
+plot(prob)
 ```
