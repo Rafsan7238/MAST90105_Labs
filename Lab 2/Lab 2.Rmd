@@ -15,5 +15,17 @@ Sample size: 10
 x = 0:10
 prob = dhyper(x, 30, 9970, 10)
 print(prob)
-plot(prob)
+plot(x, prob, ylab="pmf", main="Hypergeometric Probabilities", lwd=2)
+```
+
+Task 1c:
+
+```{r}
+y1 = dhyper(x, 30, 970, 10)
+y2 = dhyper(x, 30, 70, 10)
+y3 = dhyper(x, 30, 20, 10)
+
+plot(x, y1, ylab="pmf", main="Hypergeometric Probabilities", lwd=2, col="green")
+lines(x, y2, ylab="pmf", lwd=2, col="red", type="p")
+lines(x, y3, ylab="pmf", lwd=2, col="blue", type="p")
 ```
