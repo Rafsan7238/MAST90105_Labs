@@ -1,0 +1,8 @@
+---
+title: "Lab 2: Calculating Probabilities and Plotting Distributions"
+output: html_notebook
+---
+
+```{r}
+plot(cars)
+```
