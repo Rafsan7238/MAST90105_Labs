@@ -29,3 +29,26 @@ plot(x, y1, ylab="pmf", main="Hypergeometric Probabilities", lwd=2, col="green")
 lines(x, y2, ylab="pmf", lwd=2, col="red", type="p")
 lines(x, y3, ylab="pmf", lwd=2, col="blue", type="p")
 ```
+
+Task 2a, b:
+
+Ai = i improvable lines
+
+Pr(Ai) = 0.9/101; when meets standard
+
+Pr(Ai) = 0.1/900; when not meets standard
+
+B = 5 lines of code in the sample of 20 that could be improved
+
+```{r}
+
+i1 = 0:100
+i2 = 101:1000
+
+prb = (0.9/101)*sum(dhyper(5, i1, 1000-i1, 20)) + (0.1/900)*sum(dhyper(5, i2, 1000-i2, 20))
+
+pr = rep(0, 1001)
+pr[1:101] = (0.9/101)*dhyper(5, i1, 1000-i1, 20)/prb
+pr[102:1001] = (0.1/900)*dhyper(5, i2, 1000-i2, 20)/prb
+plot(0:1000, pr, xlab="x", ylab="pmf", lwd="2")
+```
