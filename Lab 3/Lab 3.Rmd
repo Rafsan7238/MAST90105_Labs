@@ -34,3 +34,9 @@ Task 1d
 Task 1e
 
 Prefer to draw second as chance of winning is higher.
+
+Task 2a
+
+```{r}
+dhyper(0, 20, 80, 5)
+```
