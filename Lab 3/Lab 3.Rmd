@@ -30,3 +30,7 @@ Task 1d
 ```{r}
 1-pr
 ```
+
+Task 1e
+
+Prefer to draw second as chance of winning is higher.
