@@ -3,6 +3,10 @@ title: "Lab 3"
 output: html_notebook
 ---
 
-```{r}
+Task 1a
 
+P(draw last W on your 2nd turn \| WW)\*P(WW)
+
+```{r}
+dhyper(2, 3, 17, 2)*(1/18)
 ```
