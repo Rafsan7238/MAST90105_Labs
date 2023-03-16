@@ -71,3 +71,12 @@ Task 2e
 ```{r}
 ex2 - (ex^2)
 ```
+
+Task 2f
+
+```{r}
+k = 0:5
+pmf = dhyper(k, 20, 80, 5)
+
+plot(k, pmf, main = "pmf of X", type="h", xlab="x")
+```
