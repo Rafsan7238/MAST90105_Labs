@@ -57,3 +57,9 @@ Task 2c
 k=0:5
 sum(k*dhyper(k,20,80,5))
 ```
+
+Task 2d
+
+```{r}
+sum(k^2*dhyper(k,20,80,5))
+```
