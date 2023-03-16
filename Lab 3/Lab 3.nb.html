@@ -1836,9 +1836,10 @@ pr</code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaz0wOjVcbnN1bShrKmRoeXBlcihrLDIwLDgwLDUpKVxuYGBgIn0= -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaz0wOjVcbmV4ID0gc3VtKGsqZGh5cGVyKGssMjAsODAsNSkpXG5leFxuYGBgIn0= -->
 <pre class="r"><code>k=0:5
-sum(k*dhyper(k,20,80,5))</code></pre>
+ex = sum(k*dhyper(k,20,80,5))
+ex</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDFcbiJ9 -->
 <pre><code>[1] 1</code></pre>
@@ -1848,15 +1849,27 @@ sum(k*dhyper(k,20,80,5))</code></pre>
 <p>Task 2d</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3VtKGteMipkaHlwZXIoaywyMCw4MCw1KSlcbmBgYCJ9 -->
-<pre class="r"><code>sum(k^2*dhyper(k,20,80,5))</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXgyID0gc3VtKGteMipkaHlwZXIoaywyMCw4MCw1KSlcbmV4MlxuYGBgIn0= -->
+<pre class="r"><code>ex2 = sum(k^2*dhyper(k,20,80,5))
+ex2</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIDEuNzY3Njc3XG4ifQ== -->
 <pre><code>[1] 1.767677</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 2e</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZXgyIC0gKGV4XjIpXG5gYGAifQ== -->
+<pre class="r"><code>ex2 - (ex^2)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDAuNzY3Njc2OFxuIn0= -->
+<pre><code>[1] 0.7676768</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKClAoZHJhdyBsYXN0IFcgb24geW91ciAybmQgdHVybiBcfCBXVylcKlAoV1cpCgpgYGB7cn0KZGh5cGVyKDIsIDMsIDE3LCAyKSooMS8xOCkKYGBgCgpUYXNrIDFiCgpgYGB7cn0KZGh5cGVyKDIsIDMsIDE3LCAzKSooMS8xNykKYGBgCgpUYXNrIDFjCgpgYGB7cn0Kaz0yOjEwCnByID0gc3VtKGRoeXBlcigyLCAzLCAxNywgMiprLTIpLygyMi0yKmspKQpwcgpgYGAKClRhc2sgMWQKCmBgYHtyfQoxLXByCmBgYAoKVGFzayAxZQoKUHJlZmVyIHRvIGRyYXcgc2Vjb25kIGFzIGNoYW5jZSBvZiB3aW5uaW5nIGlzIGhpZ2hlci4KClRhc2sgMmEKCmBgYHtyfQpkaHlwZXIoMCwgMjAsIDgwLCA1KQpgYGAKClRhc2sgMmIKCmBgYHtyfQpwaHlwZXIoMywgMjAsIDgwLCA1KQpgYGAKClRhc2sgMmMKCmBgYHtyfQo1KigyMC8xMDApCmBgYAoKYGBge3J9Cms9MDo1CnN1bShrKmRoeXBlcihrLDIwLDgwLDUpKQpgYGAKClRhc2sgMmQKCmBgYHtyfQpzdW0oa14yKmRoeXBlcihrLDIwLDgwLDUpKQpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKClAoZHJhdyBsYXN0IFcgb24geW91ciAybmQgdHVybiBcfCBXVylcKlAoV1cpCgpgYGB7cn0KZGh5cGVyKDIsIDMsIDE3LCAyKSooMS8xOCkKYGBgCgpUYXNrIDFiCgpgYGB7cn0KZGh5cGVyKDIsIDMsIDE3LCAzKSooMS8xNykKYGBgCgpUYXNrIDFjCgpgYGB7cn0Kaz0yOjEwCnByID0gc3VtKGRoeXBlcigyLCAzLCAxNywgMiprLTIpLygyMi0yKmspKQpwcgpgYGAKClRhc2sgMWQKCmBgYHtyfQoxLXByCmBgYAoKVGFzayAxZQoKUHJlZmVyIHRvIGRyYXcgc2Vjb25kIGFzIGNoYW5jZSBvZiB3aW5uaW5nIGlzIGhpZ2hlci4KClRhc2sgMmEKCmBgYHtyfQpkaHlwZXIoMCwgMjAsIDgwLCA1KQpgYGAKClRhc2sgMmIKCmBgYHtyfQpwaHlwZXIoMywgMjAsIDgwLCA1KQpgYGAKClRhc2sgMmMKCmBgYHtyfQo1KigyMC8xMDApCmBgYAoKYGBge3J9Cms9MDo1CmV4ID0gc3VtKGsqZGh5cGVyKGssMjAsODAsNSkpCmV4CmBgYAoKVGFzayAyZAoKYGBge3J9CmV4MiA9IHN1bShrXjIqZGh5cGVyKGssMjAsODAsNSkpCmV4MgpgYGAKClRhc2sgMmUKCmBgYHtyfQpleDIgLSAoZXheMikKYGBgCg==</div>
 
 
 

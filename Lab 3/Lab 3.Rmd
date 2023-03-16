@@ -55,11 +55,19 @@ Task 2c
 
 ```{r}
 k=0:5
-sum(k*dhyper(k,20,80,5))
+ex = sum(k*dhyper(k,20,80,5))
+ex
 ```
 
 Task 2d
 
 ```{r}
-sum(k^2*dhyper(k,20,80,5))
+ex2 = sum(k^2*dhyper(k,20,80,5))
+ex2
+```
+
+Task 2e
+
+```{r}
+ex2 - (ex^2)
 ```
