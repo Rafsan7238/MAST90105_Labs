@@ -2,3 +2,14 @@
 title: "Lab 4"
 output: html_notebook
 ---
+
+Task 1a
+
+```{r}
+# fix p and declare n as vector
+
+n = c(1,10,50,100,250,500)
+p = 0.1
+
+m34binomial(n, p)
+```
