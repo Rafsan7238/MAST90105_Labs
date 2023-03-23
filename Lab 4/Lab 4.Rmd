@@ -84,3 +84,7 @@ distBinomHyper(n, p, n+100)
 p=0.1
 distBinomHyper(n, p, n+1500)
 ```
+
+```{r}
+distBinomHyper(n, p, 16000000)
+```
