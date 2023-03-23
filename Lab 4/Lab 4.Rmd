@@ -59,3 +59,8 @@ m34negbinomial(r, p)
 p = 0.7
 m34negbinomial(r, p)
 ```
+
+```{r}
+p = 0.9
+m34negbinomial(r, p)
+```
