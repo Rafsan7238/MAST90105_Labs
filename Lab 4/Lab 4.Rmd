@@ -24,3 +24,8 @@ m34binomial(n, p)
 p = 0.5
 m34binomial(n, p)
 ```
+
+```{r}
+p = 0.7
+m34binomial(n, p)
+```
