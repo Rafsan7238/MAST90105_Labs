@@ -81,5 +81,6 @@ distBinomHyper(n, p, n+100)
 ```
 
 ```{r}
-
+p=0.1
+distBinomHyper(n, p, n+1500)
 ```
