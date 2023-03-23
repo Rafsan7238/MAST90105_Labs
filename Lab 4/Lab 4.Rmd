@@ -71,7 +71,15 @@ Task 2a
 # fix p, n and vary t as vector
 n = 500
 p = 0.1
-t = c(n+100, n+500, n+1500, n+2000, n+10000, 16000000)
 
 distBinomHyper(n, p, t=n+100)
+```
+
+```{r}
+p=0.3
+distBinomHyper(n, p, n+100)
+```
+
+```{r}
+
 ```
