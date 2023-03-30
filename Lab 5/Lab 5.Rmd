@@ -41,3 +41,24 @@ W = sum(x^2 + y^2 < 1)
 Y = W/250000
 Y-pi
 ```
+
+**Task 2c**
+
+```{r}
+
+func1 = function(N=1e6, n=100) {
+  
+  W = rep(0, n)
+  
+  for (i in 1:n){
+    
+    x1 = runif(N)
+    y1 = runif(N)
+
+    W[i] = sum(x1^2 + y1^2 < 1) / (N/4)
+  }
+  
+  return (mean(W))
+  
+}
+```

@@ -1789,8 +1789,31 @@ Y-pi</code></pre>
 <pre><code>[1] -0.0002166536</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p><strong>Task 2c</strong></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5mdW5jMSA9IGZ1bmN0aW9uKE49MWU2LCBuPTEwMCkge1xuICBcbiAgVyA9IHJlcCgwLCBuKVxuICBcbiAgZm9yIChpIGluIDE6bil7XG4gICAgXG4gICAgeDEgPSBydW5pZihOKVxuICAgIHkxID0gcnVuaWYoTilcblxuICAgIFdbaV0gPSBzdW0oeDFeMiArIHkxXjIgPCAxKSAvIChOLzQpXG4gIH1cbiAgXG4gIHJldHVybiAobWVhbihXKSlcbiAgXG59XG5gYGAifQ== -->
+<pre class="r"><code>
+func1 = function(N=1e6, n=100) {
+  
+  W = rep(0, n)
+  
+  for (i in 1:n){
+    
+    x1 = runif(N)
+    y1 = runif(N)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCioqVGFzayAxYSoqCgpXIGhhcyBhIGJpbm9taWFsIGRpc3RyaWJ1dGlvbi4gVGhpcyBpcyBhbGwgcG9pbnRzIHdpdGhpbiB0aGUgcXVhcnRlciBjaXJjbGUgYmV0d2VlbiB4ICgwLDEpIGFuZCB5KDAsMSkuIFByKHN1Y2Nlc3MpID0gYXJlYSBvZiBxdWFydGVyIGNpcmNsZS9hcmVhIG9mIHVuaXQgc3F1YXJlID0gKHBpXCoxXjIvNCkvKDFeMikgPSBwaS80LgoKVyBcfiBCaW5vbWlhbChuPTEwMDAwMDAsIHA9cGkvNCkuCgpQTUYoeCkgPSAxMDAwMDAwQ3gocGkvNClcXnggXCogKDEtKHBpLzQpKVxeKDEwMDAwMDAteCkKCioqVGFzayAxYioqCgpFKFcpID0gblwqcCA9IDEwMDAwMDAgXCogcGkvNAoKVmFyKFcpID0gblwqcFwqKDEtcCkgPSAxMDAwMDAwXCpwaS80XCooMS1waS80KQoKU0QoVykgPSBzcXJ0KFZhcihXKSkKCioqVGFzayAxYyoqCgpFKFcvMjUwMDAwKSA9IEUoVykvMjUwMDAwID0gcGkKCioqVGFzayAyYSoqCgpgYGB7cn0KCm4gPSAxZTYKeCA9IHJ1bmlmKG4pCnkgPSBydW5pZihuKQoKVyA9IHN1bSh4XjIgKyB5XjIgPCAxKQpgYGAKCioqVGFzayAyYioqCgpgYGB7cn0KClkgPSBXLzI1MDAwMApZLXBpCmBgYAo=</div>
+    W[i] = sum(x1^2 + y1^2 &lt; 1) / (N/4)
+  }
+  
+  return (mean(W))
+  
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDUiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCioqVGFzayAxYSoqCgpXIGhhcyBhIGJpbm9taWFsIGRpc3RyaWJ1dGlvbi4gVGhpcyBpcyBhbGwgcG9pbnRzIHdpdGhpbiB0aGUgcXVhcnRlciBjaXJjbGUgYmV0d2VlbiB4ICgwLDEpIGFuZCB5KDAsMSkuIFByKHN1Y2Nlc3MpID0gYXJlYSBvZiBxdWFydGVyIGNpcmNsZS9hcmVhIG9mIHVuaXQgc3F1YXJlID0gKHBpXCoxXjIvNCkvKDFeMikgPSBwaS80LgoKVyBcfiBCaW5vbWlhbChuPTEwMDAwMDAsIHA9cGkvNCkuCgpQTUYoeCkgPSAxMDAwMDAwQ3gocGkvNClcXnggXCogKDEtKHBpLzQpKVxeKDEwMDAwMDAteCkKCioqVGFzayAxYioqCgpFKFcpID0gblwqcCA9IDEwMDAwMDAgXCogcGkvNAoKVmFyKFcpID0gblwqcFwqKDEtcCkgPSAxMDAwMDAwXCpwaS80XCooMS1waS80KQoKU0QoVykgPSBzcXJ0KFZhcihXKSkKCioqVGFzayAxYyoqCgpFKFcvMjUwMDAwKSA9IEUoVykvMjUwMDAwID0gcGkKCioqVGFzayAyYSoqCgpgYGB7cn0KCm4gPSAxZTYKeCA9IHJ1bmlmKG4pCnkgPSBydW5pZihuKQoKVyA9IHN1bSh4XjIgKyB5XjIgPCAxKQpgYGAKCioqVGFzayAyYioqCgpgYGB7cn0KClkgPSBXLzI1MDAwMApZLXBpCmBgYAoKKipUYXNrIDJjKioKCmBgYHtyfQoKZnVuYzEgPSBmdW5jdGlvbihOPTFlNiwgbj0xMDApIHsKICAKICBXID0gcmVwKDAsIG4pCiAgCiAgZm9yIChpIGluIDE6bil7CiAgICAKICAgIHgxID0gcnVuaWYoTikKICAgIHkxID0gcnVuaWYoTikKCiAgICBXW2ldID0gc3VtKHgxXjIgKyB5MV4yIDwgMSkgLyAoTi80KQogIH0KICAKICByZXR1cm4gKG1lYW4oVykpCiAgCn0KYGBgCg==</div>
 
 
 
