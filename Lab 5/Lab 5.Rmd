@@ -3,11 +3,10 @@ title: "Lab 5"
 output: html_notebook
 ---
 
-Task 1a
+**Task 1a**
 
-W has a binomial distribution. This is all points within the quarter circle between x (0,1) and y(0,1). Pr(success) = area of quarter circle/area of unit square = (pi*1^2/4)/(1^2) = pi/4. 
+W has a binomial distribution. This is all points within the quarter circle between x (0,1) and y(0,1). Pr(success) = area of quarter circle/area of unit square = (pi\*1^2/4)/(1^2) = pi/4.
 
-W ~ Binomial(n=1000000, p=pi/4). 
+W \~ Binomial(n=1000000, p=pi/4).
 
-PMF(x) = 1000000Cx(pi/4)^x * (1-(pi/4))^(1000000-x)
-
+PMF(x) = 1000000Cx(pi/4)\^x \* (1-(pi/4))\^(1000000-x)
