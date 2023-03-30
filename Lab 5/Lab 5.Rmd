@@ -22,3 +22,14 @@ SD(W) = sqrt(Var(W))
 **Task 1c**
 
 E(W/250000) = E(W)/250000 = pi
+
+**Task 2a**
+
+```{r}
+
+n = 1e6
+x = runif(n)
+y = runif(n)
+
+W = sum(x^2 + y^2 < 1)
+```
