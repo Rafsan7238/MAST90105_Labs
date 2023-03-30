@@ -17,4 +17,8 @@ E(W) = n\*p = 1000000 \* pi/4
 
 Var(W) = n\*p\*(1-p) = 1000000\*pi/4\*(1-pi/4)
 
-SD(W) = sqrt(Var(W)).
+SD(W) = sqrt(Var(W))
+
+**Task 1c**
+
+E(W/250000) = E(W)/250000 = pi
