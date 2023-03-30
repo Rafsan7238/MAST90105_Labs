@@ -68,3 +68,9 @@ func1 = function(N=1e6, n=100) {
 w = func1()
 w-pi
 ```
+
+**Task 3a**
+
+```{r}
+p
+```
