@@ -62,3 +62,9 @@ func1 = function(N=1e6, n=100) {
   
 }
 ```
+
+```{r}
+
+w = func1()
+w-pi
+```
