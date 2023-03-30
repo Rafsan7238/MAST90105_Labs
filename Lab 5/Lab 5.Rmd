@@ -10,3 +10,11 @@ W has a binomial distribution. This is all points within the quarter circle betw
 W \~ Binomial(n=1000000, p=pi/4).
 
 PMF(x) = 1000000Cx(pi/4)\^x \* (1-(pi/4))\^(1000000-x)
+
+**Task 1b**
+
+E(W) = n\*p = 1000000 \* pi/4
+
+Var(W) = n\*p\*(1-p) = 1000000\*pi/4\*(1-pi/4)
+
+SD(W) = sqrt(Var(W)).
