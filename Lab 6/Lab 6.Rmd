@@ -40,4 +40,5 @@ for (i in 1:1000){
 
 ```{r}
 apply(M, 2, mean)
+apply(M, 2, var)
 ```
