@@ -2,3 +2,7 @@
 title: "Lab 6"
 output: html_notebook
 ---
+
+**Task 1a**
+
+Y\~Normal(mu=15, var=116)
