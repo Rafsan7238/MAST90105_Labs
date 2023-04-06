@@ -25,3 +25,19 @@ simf = function(seed){
 ```{r}
 simf(1)
 ```
+
+**Task 1c**
+
+```{r}
+
+M = matrix(nrow = 1000, ncol = 2)
+
+for (i in 1:1000){
+  M[i,] = simf(i)
+}
+  
+```
+
+```{r}
+apply(M, 2, mean)
+```
