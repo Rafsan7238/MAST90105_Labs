@@ -15,9 +15,13 @@ simf = function(seed){
   
   set.seed(seed)
   Y = rnorm(100, mean = 15, sd = sqrt(116))
-  Y2 = ((Y-15)^2)/16
+  Y2 = ((Y-15)^2)/116
   
   c(mean(Y), mean(Y2))
 }
 
+```
+
+```{r}
+simf(1)
 ```
