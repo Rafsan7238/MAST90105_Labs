@@ -6,3 +6,18 @@ output: html_notebook
 **Task 1a**
 
 Y\~Normal(mu=15, var=116)
+
+**Task 1b**
+
+```{r}
+
+simf = function(seed){
+  
+  set.seed(seed)
+  Y = rnorm(100, mean = 15, sd = sqrt(116))
+  Y2 = ((Y-15)^2)/16
+  
+  c(mean(Y), mean(Y2))
+}
+
+```

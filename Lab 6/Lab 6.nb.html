@@ -1754,9 +1754,24 @@ display: none;
 <!-- rnb-text-begin -->
 <p><strong>Task 1a</strong></p>
 <p>Y~Normal(mu=15, var=116)</p>
+<p><strong>Task 1b</strong></p>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5zaW1mID0gZnVuY3Rpb24oc2VlZCl7XG4gIFxuICBzZXQuc2VlZChzZWVkKVxuICBZID0gcm5vcm0oMTAwLCBtZWFuID0gMTUsIHNkID0gc3FydCgxMTYpKVxuICBZMiA9ICgoWS0xNSleMikvMTZcbiAgXG4gIGMobWVhbihZKSwgbWVhbihZMikpXG59XG5cbmBgYCJ9 -->
+<pre class="r"><code>
+simf = function(seed){
+  
+  set.seed(seed)
+  Y = rnorm(100, mean = 15, sd = sqrt(116))
+  Y2 = ((Y-15)^2)/16
+  
+  c(mean(Y), mean(Y2))
+}
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDYiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCioqVGFzayAxYSoqCgpZXH5Ob3JtYWwobXU9MTUsIHZhcj0xMTYpCg==</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDYiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCioqVGFzayAxYSoqCgpZXH5Ob3JtYWwobXU9MTUsIHZhcj0xMTYpCgoqKlRhc2sgMWIqKgoKYGBge3J9CgpzaW1mID0gZnVuY3Rpb24oc2VlZCl7CiAgCiAgc2V0LnNlZWQoc2VlZCkKICBZID0gcm5vcm0oMTAwLCBtZWFuID0gMTUsIHNkID0gc3FydCgxMTYpKQogIFkyID0gKChZLTE1KV4yKS8xNgogIAogIGMobWVhbihZKSwgbWVhbihZMikpCn0KCmBgYAo=</div>
 
 
 
