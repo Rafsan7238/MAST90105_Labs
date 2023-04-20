@@ -98,6 +98,20 @@ EV distribution.
 
 ```{r}
 Finv = function(p) {
-  return -log(-log(p))
+  return (-log(-log(p)))
 } # quantile function
+```
+
+```{r}
+p = (1:20)/21
+
+y = sort(s1) # order statistics
+x = Finv(p) # theoretical quantiles
+
+plot(x, y, ylab = "Sample quantiles", xlab = "EV quantiles")
+
+# the next command computes and plots the 'best
+# fitting line' (more details in next weeks)
+fit = lm(y ~ x)
+abline(fit) # adds best fit line
 ```
