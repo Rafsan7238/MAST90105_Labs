@@ -31,5 +31,11 @@ Exploring the distribution of extreme rainfall in Burnie
 
 ```{r}
 
-summary(s1)
+summary(s1) # 5-number summary plus sample mean
+```
+
+```{r}
+sd(s1) # sample standard deviaion
+
+IQR(s1) # IQR
 ```
