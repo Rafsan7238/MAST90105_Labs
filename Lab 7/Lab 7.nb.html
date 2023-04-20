@@ -1822,8 +1822,28 @@ summary(s1)</code></pre>
 <pre><code>[1] 16.6</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyBzYW1wbGUgcGVyY2VudGlsZXMgdXNpbmcgVHlwZSA2IGFuZCA3XG4jIGFwcHJveGltYXRpb25zXG5xdWFudGlsZShzMSwgdHlwZSA9IDYpXG5gYGAifQ== -->
+<pre class="r"><code># sample percentiles using Type 6 and 7
+# approximations
+quantile(s1, type = 6)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAwJSAgMjUlICA1MCUgIDc1JSAxMDAlIFxuMjcuMCAzNi4wIDQ3LjQgNTUuNCA4Ny4yIFxuIn0= -->
+<pre><code>  0%  25%  50%  75% 100% 
+27.0 36.0 47.4 55.4 87.2 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucXVhbnRpbGUoczEsIHR5cGUgPSA3KVxuYGBgIn0= -->
+<pre class="r"><code>quantile(s1, type = 7)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiICAwJSAgMjUlICA1MCUgIDc1JSAxMDAlIFxuMjcuMCAzNy42IDQ3LjQgNTQuMiA4Ny4yIFxuIn0= -->
+<pre><code>  0%  25%  50%  75% 100% 
+27.0 37.6 47.4 54.2 87.2 </code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClNldCB0aGUgd29ya2luZyBkaXJlY3RvcnkKCmBgYHtyfQpzZXR3ZCgnL1VzZXJzL3JhZnNhbmFsbWFtdW4vRGVza3RvcC9NQVNUOTAxMDVfTGFicy9MYWIgNycpCmBgYAoKTG9hZCB0aGUgZGF0YQoKYGBge3J9CnRhc21hbmlhID0gcmVhZC5jc3YoJ0VkaXRlZFJhaW5mYWxsLmNzdicpCmBgYAoKVmlldyB0aGUgZGF0YSBhbmQgY3JlYXRpbmcgdmFyaWFibGVzCgpgYGB7cn0KClZpZXcodGFzbWFuaWEpCmRpbSh0YXNtYW5pYSkgIyBjaGVjayBkYXRhIGRpbWVuc2lvbgpuYW1lcyh0YXNtYW5pYVssIDE6NV0pICMgbmFtZXMgb2YgdGhlIGZpcnN0IDUgY29sdW1ucwp5ZWFyID0gdGFzbWFuaWFbLCAxXSAjIGNyZWF0ZSBhIHZlY3RvciBmb3IgeWVhcgpzMSA9IHRhc21hbmlhWywgMl0gIyBjcmVhdGUgYSB2ZWN0b3IgZm9yIHN0YXRpb24gMSAoQnVybmllKQpzMiA9IHRhc21hbmlhWywgM10gIyBjcmVhdGUgYSB2ZWN0b3IgZm9yIHN0YXRpb24gMiAoQ2FwZSBHcmltKQpgYGAKCkV4cGxvcmluZyB0aGUgZGlzdHJpYnV0aW9uIG9mIGV4dHJlbWUgcmFpbmZhbGwgaW4gQnVybmllCgpgYGB7cn0KCnN1bW1hcnkoczEpICMgNS1udW1iZXIgc3VtbWFyeSBwbHVzIHNhbXBsZSBtZWFuCmBgYAoKYGBge3J9CnNkKHMxKSAjIHNhbXBsZSBzdGFuZGFyZCBkZXZpYWlvbgoKSVFSKHMxKSAjIElRUgpgYGAK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDciCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClNldCB0aGUgd29ya2luZyBkaXJlY3RvcnkKCmBgYHtyfQpzZXR3ZCgnL1VzZXJzL3JhZnNhbmFsbWFtdW4vRGVza3RvcC9NQVNUOTAxMDVfTGFicy9MYWIgNycpCmBgYAoKTG9hZCB0aGUgZGF0YQoKYGBge3J9CnRhc21hbmlhID0gcmVhZC5jc3YoJ0VkaXRlZFJhaW5mYWxsLmNzdicpCmBgYAoKVmlldyB0aGUgZGF0YSBhbmQgY3JlYXRpbmcgdmFyaWFibGVzCgpgYGB7cn0KClZpZXcodGFzbWFuaWEpCmRpbSh0YXNtYW5pYSkgIyBjaGVjayBkYXRhIGRpbWVuc2lvbgpuYW1lcyh0YXNtYW5pYVssIDE6NV0pICMgbmFtZXMgb2YgdGhlIGZpcnN0IDUgY29sdW1ucwp5ZWFyID0gdGFzbWFuaWFbLCAxXSAjIGNyZWF0ZSBhIHZlY3RvciBmb3IgeWVhcgpzMSA9IHRhc21hbmlhWywgMl0gIyBjcmVhdGUgYSB2ZWN0b3IgZm9yIHN0YXRpb24gMSAoQnVybmllKQpzMiA9IHRhc21hbmlhWywgM10gIyBjcmVhdGUgYSB2ZWN0b3IgZm9yIHN0YXRpb24gMiAoQ2FwZSBHcmltKQpgYGAKCkV4cGxvcmluZyB0aGUgZGlzdHJpYnV0aW9uIG9mIGV4dHJlbWUgcmFpbmZhbGwgaW4gQnVybmllCgpgYGB7cn0KCnN1bW1hcnkoczEpICMgNS1udW1iZXIgc3VtbWFyeSBwbHVzIHNhbXBsZSBtZWFuCmBgYAoKYGBge3J9CnNkKHMxKSAjIHNhbXBsZSBzdGFuZGFyZCBkZXZpYWlvbgoKSVFSKHMxKSAjIElRUgpgYGAKCmBgYHtyfQojIHNhbXBsZSBwZXJjZW50aWxlcyB1c2luZyBUeXBlIDYgYW5kIDcKIyBhcHByb3hpbWF0aW9ucwpxdWFudGlsZShzMSwgdHlwZSA9IDYpCnF1YW50aWxlKHMxLCB0eXBlID0gNykKYGBgCg==</div>
 
 
 

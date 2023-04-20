@@ -39,3 +39,10 @@ sd(s1) # sample standard deviaion
 
 IQR(s1) # IQR
 ```
+
+```{r}
+# sample percentiles using Type 6 and 7
+# approximations
+quantile(s1, type = 6)
+quantile(s1, type = 7)
+```
