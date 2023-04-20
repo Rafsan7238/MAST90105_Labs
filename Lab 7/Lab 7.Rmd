@@ -8,3 +8,19 @@ Set the working directory
 ```{r}
 setwd('/Users/rafsanalmamun/Desktop/MAST90105_Labs/Lab 7')
 ```
+
+Load the data
+
+```{r}
+tasmania = read.csv('EditedRainfall.csv')
+```
+
+```{r}
+
+View(tasmania)
+dim(tasmania) # check data dimension
+names(tasmania[, 1:5]) # names of the first 5 columns
+year = tasmania[, 1] # create a vector for year
+s1 = tasmania[, 2] # create a vector for station 1 (Burnie)
+s2 = tasmania[, 3] # create a vector for station 2 (Cape Grim)
+```
