@@ -46,3 +46,13 @@ IQR(s1) # IQR
 quantile(s1, type = 6)
 quantile(s1, type = 7)
 ```
+
+Exploring the distribution of extreme rainfall in Cape Grim
+
+```{r}
+summary(s2)
+
+# remove the null values to calculate sd and IQR
+sd(s2, na.rm = TRUE)
+IQR(s2, na.rm = TRUE)
+```
