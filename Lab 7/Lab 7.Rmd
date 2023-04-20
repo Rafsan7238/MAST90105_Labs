@@ -56,3 +56,12 @@ summary(s2)
 sd(s2, na.rm = TRUE)
 IQR(s2, na.rm = TRUE)
 ```
+
+Exploring data by graphical summaries
+
+```{r}
+
+hist(s1, freq = FALSE, xlab = "Extreme rainfall (Burnie, Tas)") # freq = FALSE gives density
+smooth.density = density(s1) # fits a smooth curve
+points(smooth.density, type = "l", lty = 2, col = 2) # adds a smooth curve
+```
