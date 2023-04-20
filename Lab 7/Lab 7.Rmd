@@ -72,3 +72,12 @@ Comparing the distribution of Burnie and Cape Grim
 boxplot(s1, s2, names = c("Burnie Is", "Cape Grim"),
 col = c("yellow", "orange"))
 ```
+
+Exploring the empirical cdfs:\
+
+```{r}
+ecdf1 = ecdf(s1)
+ecdf2 = ecdf(s2)
+plot(ecdf1)
+plot(ecdf2, col = 2, add = TRUE)
+```
