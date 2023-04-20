@@ -65,3 +65,10 @@ hist(s1, freq = FALSE, xlab = "Extreme rainfall (Burnie, Tas)") # freq = FALSE g
 smooth.density = density(s1) # fits a smooth curve
 points(smooth.density, type = "l", lty = 2, col = 2) # adds a smooth curve
 ```
+
+Comparing the distribution of Burnie and Cape Grim
+
+```{r}
+boxplot(s1, s2, names = c("Burnie Is", "Cape Grim"),
+col = c("yellow", "orange"))
+```
