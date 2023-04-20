@@ -89,3 +89,15 @@ distribution.\
 qqnorm(s1, main = "Normal QQ plot for S1") # normal QQ plot
 qqline(s1, col='blue')
 ```
+
+Although the central part of the data distribution is compatible with the normal distri-\
+bution, note that the right tail deviates from the straight line. Probability theory suggests\
+that extremes such as rainfall maxima follow the so-called Extreme Value distribution with\
+inverse cdf μ + σF −1(p), where F −1(p) = − log(− log(p)) is the inverse cdf of the standard\
+EV distribution.
+
+```{r}
+Finv = function(p) {
+  return -log(-log(p))
+} # quantile function
+```
