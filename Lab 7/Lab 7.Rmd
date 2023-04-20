@@ -26,3 +26,10 @@ year = tasmania[, 1] # create a vector for year
 s1 = tasmania[, 2] # create a vector for station 1 (Burnie)
 s2 = tasmania[, 3] # create a vector for station 2 (Cape Grim)
 ```
+
+Exploring the distribution of extreme rainfall in Burnie
+
+```{r}
+
+summary(s1)
+```
