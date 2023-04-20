@@ -81,3 +81,11 @@ ecdf2 = ecdf(s2)
 plot(ecdf1)
 plot(ecdf2, col = 2, add = TRUE)
 ```
+
+The QQ plot compares the empirical distribution of the data against some theoretical\
+distribution.\
+
+```{r}
+qqnorm(s1, main = "Normal QQ plot for S1") # normal QQ plot
+qqline(s1, col='blue')
+```
