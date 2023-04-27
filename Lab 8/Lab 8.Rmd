@@ -14,5 +14,6 @@ f = function(x){
 ```
 
 ```{r}
-nlm()
+
+nlm(f, p=c(0,0))
 ```
