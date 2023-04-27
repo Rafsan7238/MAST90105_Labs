@@ -1,0 +1,14 @@
+---
+title: "Lab 8"
+output: html_notebook
+---
+
+Task 1a
+
+```{r}
+
+f = function(x1, x2){
+  res = exp(x1^2 + x2^2) - 2*(exp(x1) + exp(x2))
+  return (res)
+}
+```
