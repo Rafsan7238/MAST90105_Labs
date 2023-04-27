@@ -1755,16 +1755,42 @@ display: none;
 <p>Task 1a</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5mID0gZnVuY3Rpb24oeDEsIHgyKXtcbiAgcmVzID0gZXhwKHgxXjIgKyB4Ml4yKSAtIDIqKGV4cCh4MSkgKyBleHAoeDIpKVxuICByZXR1cm4gKHJlcylcbn1cbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5mID0gZnVuY3Rpb24oeCl7XG4gIHJlcyA9IGV4cCh4WzFdXjIgKyB4WzJdXjIpIC0gMiooZXhwKHhbMV0pICsgZXhwKHhbMl0pKVxuICByZXR1cm4gKHJlcylcbn1cbmBgYCJ9 -->
 <pre class="r"><code>
-f = function(x1, x2){
-  res = exp(x1^2 + x2^2) - 2*(exp(x1) + exp(x2))
+f = function(x){
+  res = exp(x[1]^2 + x[2]^2) - 2*(exp(x[1]) + exp(x[2]))
   return (res)
 }</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmxtKGYsIDEsIDMpXG5gYGAifQ== -->
+<pre class="r"><code>nlm(f, 1, 3)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiV2FybmluZzogTkEvSW5mIHJlcGxhY2VkIGJ5IG1heGltdW0gcG9zaXRpdmUgdmFsdWVXYXJuaW5nOiBOQS9JbmYgcmVwbGFjZWQgYnkgbWF4aW11bSBwb3NpdGl2ZSB2YWx1ZVxuIn0= -->
+<pre><code>Warning: NA/Inf replaced by maximum positive valueWarning: NA/Inf replaced by maximum positive value</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiJG1pbmltdW1cblsxXSA4MDYwLjkxM1xuXG4kZXN0aW1hdGVcblsxXSAwLjAwMDEyMjkyNjRcblxuJGdyYWRpZW50XG5bMV0gMi42Mzc1MzVlLTA1XG5cbiRjb2RlXG5bMV0gMVxuXG4kaXRlcmF0aW9uc1xuWzFdIDNcbiJ9 -->
+<pre><code>$minimum
+[1] 8060.913
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQoKZiA9IGZ1bmN0aW9uKHgxLCB4Mil7CiAgcmVzID0gZXhwKHgxXjIgKyB4Ml4yKSAtIDIqKGV4cCh4MSkgKyBleHAoeDIpKQogIHJldHVybiAocmVzKQp9CmBgYAo=</div>
+$estimate
+[1] 0.0001229264
+
+$gradient
+[1] 2.637535e-05
+
+$code
+[1] 1
+
+$iterations
+[1] 3</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQoKZiA9IGZ1bmN0aW9uKHgpewogIHJlcyA9IGV4cCh4WzFdXjIgKyB4WzJdXjIpIC0gMiooZXhwKHhbMV0pICsgZXhwKHhbMl0pKQogIHJldHVybiAocmVzKQp9CmBgYAoKYGBge3J9Cm5sbSgpCmBgYAo=</div>
 
 
 

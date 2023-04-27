@@ -7,8 +7,12 @@ Task 1a
 
 ```{r}
 
-f = function(x1, x2){
-  res = exp(x1^2 + x2^2) - 2*(exp(x1) + exp(x2))
+f = function(x){
+  res = exp(x[1]^2 + x[2]^2) - 2*(exp(x[1]) + exp(x[2]))
   return (res)
 }
+```
+
+```{r}
+nlm()
 ```
