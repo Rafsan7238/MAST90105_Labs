@@ -50,3 +50,12 @@ genf = function(N){
   return (X)
 }
 ```
+
+```{r}
+set.seed(123)
+X=genf(1000)
+hist(X, freq = FALSE)
+
+M = density(X)
+points(M, type="l")
+```
