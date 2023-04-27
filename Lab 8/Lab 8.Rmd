@@ -59,3 +59,15 @@ hist(X, freq = FALSE)
 M = density(X)
 points(M, type="l")
 ```
+
+Task 2a
+
+f(x,y) = x+y; 0\<x,y\<1
+
+F(x,y) = 0.5(xy^2^+x^2^ y)
+
+F(x) = 0.5(x+x^2^)
+
+```{r}
+
+```
