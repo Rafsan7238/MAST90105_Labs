@@ -17,3 +17,21 @@ f = function(x){
 
 nlm(f, p=c(0,0))
 ```
+
+Task 1b
+
+f(x) = 0.5 + x^2^ + x^5^ ; 0\<x\<1
+
+CDF = 0.5x^2^ + 1/3 x^3^ + 1/6 x^6^
+
+```{r}
+
+func2 = function(x, u){
+  if (x<0 || x>1){
+    return (1e100)
+  }
+  
+  out = (x/2 + x^3/3 + x^6/6 -u)^2
+  return (out)
+}
+```

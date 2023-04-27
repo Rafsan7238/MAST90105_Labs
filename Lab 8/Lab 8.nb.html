@@ -1787,8 +1787,26 @@ $iterations
 [1] 7</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<p>Task 1b</p>
+<p>f(x) = 0.5 + x<sup>2</sup> + x<sup>5</sup> ; 0&lt;x&lt;1</p>
+<p>CDF = 0.5x<sup>2</sup> + 1/3 x<sup>3</sup> + 1/6 x<sup>6</sup></p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5mdW5jMiA9IGZ1bmN0aW9uKHgsIHUpe1xuICBpZiAoeDwwIHx8IHg+MSl7XG4gICAgcmV0dXJuICgxZTEwMClcbiAgfVxuICBcbiAgb3V0ID0gKHgvMiArIHheMy8zICsgeF42LzYgLXUpXjJcbiAgcmV0dXJuIChvdXQpXG59XG5gYGAifQ== -->
+<pre class="r"><code>
+func2 = function(x, u){
+  if (x&lt;0 || x&gt;1){
+    return (1e100)
+  }
+  
+  out = (x/2 + x^3/3 + x^6/6 -u)^2
+  return (out)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQoKZiA9IGZ1bmN0aW9uKHgpewogIHJlcyA9IGV4cCh4WzFdXjIgKyB4WzJdXjIpIC0gMiooZXhwKHhbMV0pICsgZXhwKHhbMl0pKQogIHJldHVybiAocmVzKQp9CmBgYAoKYGBge3J9CgpubG0oZiwgcD1jKDAsMCkpCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQoKZiA9IGZ1bmN0aW9uKHgpewogIHJlcyA9IGV4cCh4WzFdXjIgKyB4WzJdXjIpIC0gMiooZXhwKHhbMV0pICsgZXhwKHhbMl0pKQogIHJldHVybiAocmVzKQp9CmBgYAoKYGBge3J9CgpubG0oZiwgcD1jKDAsMCkpCmBgYAoKVGFzayAxYgoKZih4KSA9IDAuNSArIHheMl4gKyB4XjVeIDsgMFw8eFw8MQoKQ0RGID0gMC41eF4yXiArIDEvMyB4XjNeICsgMS82IHheNl4KCmBgYHtyfQoKZnVuYzIgPSBmdW5jdGlvbih4LCB1KXsKICBpZiAoeDwwIHx8IHg+MSl7CiAgICByZXR1cm4gKDFlMTAwKQogIH0KICAKICBvdXQgPSAoeC8yICsgeF4zLzMgKyB4XjYvNiAtdSleMgogIHJldHVybiAob3V0KQp9CmBgYAo=</div>
 
 
 
