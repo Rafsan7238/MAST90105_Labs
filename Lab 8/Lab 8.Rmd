@@ -35,3 +35,18 @@ func2 = function(x, u){
   return (out)
 }
 ```
+
+```{r}
+
+genf = function(N){
+  U = runif(N)
+  X = rep(0, N)
+  
+  for (i in 1:N){
+    Ui = U[i]
+    mle1 = nlm(func2, p=0.5, u=Ui)
+    X[i] = mle1$estimate
+  }
+  return (X)
+}
+```

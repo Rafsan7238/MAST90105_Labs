@@ -1805,8 +1805,26 @@ func2 = function(x, u){
 }</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5nZW5mID0gZnVuY3Rpb24oTil7XG4gIFUgPSBydW5pZihOKVxuICBYID0gcmVwKDAsIE4pXG4gIFxuICBmb3IgKGkgaW4gMTpOKXtcbiAgICBVaSA9IFVbaV1cbiAgICBtbGUxID0gbmxtKGZ1bmMyLCBwPTAuNSwgdT1VaSlcbiAgICBYW2ldID0gbWxlMSRlc3RpbWF0ZVxuICB9XG4gIHJldHVybiAoWClcbn1cbmBgYCJ9 -->
+<pre class="r"><code>
+genf = function(N){
+  U = runif(N)
+  X = rep(0, N)
+  
+  for (i in 1:N){
+    Ui = U[i]
+    mle1 = nlm(func2, p=0.5, u=Ui)
+    X[i] = mle1$estimate
+  }
+  return (X)
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQoKZiA9IGZ1bmN0aW9uKHgpewogIHJlcyA9IGV4cCh4WzFdXjIgKyB4WzJdXjIpIC0gMiooZXhwKHhbMV0pICsgZXhwKHhbMl0pKQogIHJldHVybiAocmVzKQp9CmBgYAoKYGBge3J9CgpubG0oZiwgcD1jKDAsMCkpCmBgYAoKVGFzayAxYgoKZih4KSA9IDAuNSArIHheMl4gKyB4XjVeIDsgMFw8eFw8MQoKQ0RGID0gMC41eF4yXiArIDEvMyB4XjNeICsgMS82IHheNl4KCmBgYHtyfQoKZnVuYzIgPSBmdW5jdGlvbih4LCB1KXsKICBpZiAoeDwwIHx8IHg+MSl7CiAgICByZXR1cm4gKDFlMTAwKQogIH0KICAKICBvdXQgPSAoeC8yICsgeF4zLzMgKyB4XjYvNiAtdSleMgogIHJldHVybiAob3V0KQp9CmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDgiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMWEKCmBgYHtyfQoKZiA9IGZ1bmN0aW9uKHgpewogIHJlcyA9IGV4cCh4WzFdXjIgKyB4WzJdXjIpIC0gMiooZXhwKHhbMV0pICsgZXhwKHhbMl0pKQogIHJldHVybiAocmVzKQp9CmBgYAoKYGBge3J9CgpubG0oZiwgcD1jKDAsMCkpCmBgYAoKVGFzayAxYgoKZih4KSA9IDAuNSArIHheMl4gKyB4XjVeIDsgMFw8eFw8MQoKQ0RGID0gMC41eF4yXiArIDEvMyB4XjNeICsgMS82IHheNl4KCmBgYHtyfQoKZnVuYzIgPSBmdW5jdGlvbih4LCB1KXsKICBpZiAoeDwwIHx8IHg+MSl7CiAgICByZXR1cm4gKDFlMTAwKQogIH0KICAKICBvdXQgPSAoeC8yICsgeF4zLzMgKyB4XjYvNiAtdSleMgogIHJldHVybiAob3V0KQp9CmBgYAoKYGBge3J9CgpnZW5mID0gZnVuY3Rpb24oTil7CiAgVSA9IHJ1bmlmKE4pCiAgWCA9IHJlcCgwLCBOKQogIAogIGZvciAoaSBpbiAxOk4pewogICAgVWkgPSBVW2ldCiAgICBtbGUxID0gbmxtKGZ1bmMyLCBwPTAuNSwgdT1VaSkKICAgIFhbaV0gPSBtbGUxJGVzdGltYXRlCiAgfQogIHJldHVybiAoWCkKfQpgYGAK</div>
 
 
 
