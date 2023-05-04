@@ -13,3 +13,15 @@ tasmania = read.csv("EditedRainfall.csv")
 s1 = tasmania[, 2] 
 s2 = tasmania[, 3]
 ```
+
+Task 2
+
+```{r}
+mu.hat = mean(s1)
+mu.hat
+
+n = length(s1)
+
+sigma.hat = sqrt((n - 1) * var(s1)/n)
+sigma.hat
+```
