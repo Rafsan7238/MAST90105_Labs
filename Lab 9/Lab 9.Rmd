@@ -120,3 +120,13 @@ nloglik = 0.5 * n * log(2 * pi) + n * log(sigma.hat) +
 0.5 * sum((s1 - mu.hat)^2)/sigma.hat^2
 nloglik # Normal negative log-likelihood
 ```
+
+Task 3
+
+```{r}
+sigma.tilde = sqrt(6) * sigma.hat/pi
+mu.tilde = mu.hat + digamma(1) * sigma.tilde
+
+sigma.tilde
+mu.tilde
+```
