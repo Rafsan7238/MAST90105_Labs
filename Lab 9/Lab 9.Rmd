@@ -83,3 +83,29 @@ library(MASS)
 install.packages('evd',repos='https://cloud.r-project.org')
 library(evd)
 ```
+
+```{r}
+
+# Write fitted normal and Gumbel pdfs
+mu.hat2 = out1$estimate[1]
+sigma.hat2 = out1$estimate[2]
+
+pdf1 = function(x) {
+  dnorm(x, mean = mu.hat, sd = sigma.hat)
+}
+
+pdf2 = function(x) {
+  dgumbel(x, loc = mu.hat2, scale = sigma.hat2)
+}
+
+```
+
+```{r}
+# Plot data and fitted models
+hist(s1, freq = FALSE, col = "gray", main = NULL, xlab = "x",
+xlim = c(0, 100))
+curve(pdf1, from = 0, to = 100, col = 2, lty = 2, lwd = 2,
+add = TRUE)
+curve(pdf2, from = 0, to = 100, col = 1, lty = 1, lwd = 2,
+add = TRUE)
+```
