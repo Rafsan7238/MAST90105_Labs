@@ -2,3 +2,14 @@
 title: "Lab 9"
 output: html_notebook
 ---
+
+Task 1
+
+```{r}
+tasmania = read.csv("EditedRainfall.csv")
+```
+
+```{r}
+s1 = tasmania[, 2] 
+s2 = tasmania[, 3]
+```
