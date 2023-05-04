@@ -1838,8 +1838,30 @@ $iterations
 [1] 10</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3VtYmVsLmZpdDIgPSBmdW5jdGlvbih4LCBzdGFydCA9IGMoNTAsIDEwKSkge1xuICBuID0gbGVuZ3RoKHgpXG5cbiAgbGlrZiA9IGZ1bmN0aW9uKHByKSB7XG4gICAgbXUgPSBwclsxXVxuICAgIHNpID0gcHJbMl1cbiAgICBzeCA9ICh4IC0gbXUpL3NpXG4gICAgXG4gICAgIyBtaW5pbWl6ZSBuZWdhdGl2ZSBsb2ctbGlrZWxpaG9vZFxuICAgIG5sb2dsaWsgPSBuICogbG9nKHNpKSArIHN1bShzeCkgKyBzdW0oZXhwKC1zeCkpXG4gICAgbmxvZ2xpa1xuICB9XG4gIFxuICBtbGUgPSBvcHRpbShzdGFydCwgbGlrZiwgbWV0aG9kID0gXCJMLUJGR1MtQlwiLCBsb3dlciA9IGMoLTUwLCAxZS0wNCkpXG4gIG1sZVxufVxuYGBgIn0= -->
+<pre class="r"><code>gumbel.fit2 = function(x, start = c(50, 10)) {
+  n = length(x)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnRhc21hbmlhID0gcmVhZC5jc3YoIkVkaXRlZFJhaW5mYWxsLmNzdiIpCmBgYAoKYGBge3J9CnMxID0gdGFzbWFuaWFbLCAyXSAKczIgPSB0YXNtYW5pYVssIDNdCmBgYAoKVGFzayAyCgpgYGB7cn0KbXUuaGF0ID0gbWVhbihzMSkKbXUuaGF0CgpuID0gbGVuZ3RoKHMxKQoKc2lnbWEuaGF0ID0gc3FydCgobiAtIDEpICogdmFyKHMxKS9uKQpzaWdtYS5oYXQKYGBgCgpgYGB7cn0KZ3VtYmVsLmZpdDEgPSBmdW5jdGlvbih4LCBzdGFydCA9IGMoNTAsIDEwKSkgewogIG4gPSBsZW5ndGgoeCkKCiAgbGlrZiA9IGZ1bmN0aW9uKHByKSB7CiAgICBtdSA9IHByWzFdCiAgICBzaSA9IHByWzJdCiAgCiAgICBpZiAoc2kgPD0gMCl7CiAgICAgIHJldHVybigxZSsxMDApCiAgICB9CiAgCiAgICBzeCA9ICh4IC0gbXUpL3NpCiAgICAjIG1pbmltaXplIG5lZ2F0aXZlIGxvZy1saWtlbGlob29kCiAgICBubG9nbGlrID0gbiAqIGxvZyhzaSkgKyBzdW0oc3gpICsgc3VtKGV4cCgtc3gpKQogICAgbmxvZ2xpawogIH0KICAKICBtbGUgPSBubG0obGlrZiwgcCA9IHN0YXJ0KQogIG1sZQp9CmBgYAoKYGBge3J9Cm91dDEgPSBndW1iZWwuZml0MShzMSwgc3RhcnQgPSBjKDUwLCAxMCkpCm91dDEKYGBgCg==</div>
+  likf = function(pr) {
+    mu = pr[1]
+    si = pr[2]
+    sx = (x - mu)/si
+    
+    # minimize negative log-likelihood
+    nloglik = n * log(si) + sum(sx) + sum(exp(-sx))
+    nloglik
+  }
+  
+  mle = optim(start, likf, method = &quot;L-BFGS-B&quot;, lower = c(-50, 1e-04))
+  mle
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnRhc21hbmlhID0gcmVhZC5jc3YoIkVkaXRlZFJhaW5mYWxsLmNzdiIpCmBgYAoKYGBge3J9CnMxID0gdGFzbWFuaWFbLCAyXSAKczIgPSB0YXNtYW5pYVssIDNdCmBgYAoKVGFzayAyCgpgYGB7cn0KbXUuaGF0ID0gbWVhbihzMSkKbXUuaGF0CgpuID0gbGVuZ3RoKHMxKQoKc2lnbWEuaGF0ID0gc3FydCgobiAtIDEpICogdmFyKHMxKS9uKQpzaWdtYS5oYXQKYGBgCgpgYGB7cn0KZ3VtYmVsLmZpdDEgPSBmdW5jdGlvbih4LCBzdGFydCA9IGMoNTAsIDEwKSkgewogIG4gPSBsZW5ndGgoeCkKCiAgbGlrZiA9IGZ1bmN0aW9uKHByKSB7CiAgICBtdSA9IHByWzFdCiAgICBzaSA9IHByWzJdCiAgCiAgICBpZiAoc2kgPD0gMCl7CiAgICAgIHJldHVybigxZSsxMDApCiAgICB9CiAgCiAgICBzeCA9ICh4IC0gbXUpL3NpCiAgICAjIG1pbmltaXplIG5lZ2F0aXZlIGxvZy1saWtlbGlob29kCiAgICBubG9nbGlrID0gbiAqIGxvZyhzaSkgKyBzdW0oc3gpICsgc3VtKGV4cCgtc3gpKQogICAgbmxvZ2xpawogIH0KICAKICBtbGUgPSBubG0obGlrZiwgcCA9IHN0YXJ0KQogIG1sZQp9CmBgYAoKYGBge3J9Cm91dDEgPSBndW1iZWwuZml0MShzMSwgc3RhcnQgPSBjKDUwLCAxMCkpCm91dDEKYGBgCgpgYGB7cn0KZ3VtYmVsLmZpdDIgPSBmdW5jdGlvbih4LCBzdGFydCA9IGMoNTAsIDEwKSkgewogIG4gPSBsZW5ndGgoeCkKCiAgbGlrZiA9IGZ1bmN0aW9uKHByKSB7CiAgICBtdSA9IHByWzFdCiAgICBzaSA9IHByWzJdCiAgICBzeCA9ICh4IC0gbXUpL3NpCiAgICAKICAgICMgbWluaW1pemUgbmVnYXRpdmUgbG9nLWxpa2VsaWhvb2QKICAgIG5sb2dsaWsgPSBuICogbG9nKHNpKSArIHN1bShzeCkgKyBzdW0oZXhwKC1zeCkpCiAgICBubG9nbGlrCiAgfQogIAogIG1sZSA9IG9wdGltKHN0YXJ0LCBsaWtmLCBtZXRob2QgPSAiTC1CRkdTLUIiLCBsb3dlciA9IGMoLTUwLCAxZS0wNCkpCiAgbWxlCn0KYGBgCg==</div>
 
 
 

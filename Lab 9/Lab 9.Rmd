@@ -53,3 +53,22 @@ gumbel.fit1 = function(x, start = c(50, 10)) {
 out1 = gumbel.fit1(s1, start = c(50, 10))
 out1
 ```
+
+```{r}
+gumbel.fit2 = function(x, start = c(50, 10)) {
+  n = length(x)
+
+  likf = function(pr) {
+    mu = pr[1]
+    si = pr[2]
+    sx = (x - mu)/si
+    
+    # minimize negative log-likelihood
+    nloglik = n * log(si) + sum(sx) + sum(exp(-sx))
+    nloglik
+  }
+  
+  mle = optim(start, likf, method = "L-BFGS-B", lower = c(-50, 1e-04))
+  mle
+}
+```
