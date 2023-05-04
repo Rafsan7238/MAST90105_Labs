@@ -77,3 +77,9 @@ gumbel.fit2 = function(x, start = c(50, 10)) {
 out2 = gumbel.fit2(s1, start = c(50, 10))
 out2
 ```
+
+```{r}
+library(MASS)
+install.packages('evd',repos='https://cloud.r-project.org')
+library(evd)
+```
