@@ -48,3 +48,8 @@ gumbel.fit1 = function(x, start = c(50, 10)) {
   mle
 }
 ```
+
+```{r}
+out1 = gumbel.fit1(s1, start = c(50, 10))
+out1
+```
