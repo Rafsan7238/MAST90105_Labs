@@ -113,3 +113,10 @@ add = TRUE)
 ```{r}
 out1$minimum #Gumbel negative log-likelihood
 ```
+
+```{r}
+n = length(s1)
+nloglik = 0.5 * n * log(2 * pi) + n * log(sigma.hat) +
+0.5 * sum((s1 - mu.hat)^2)/sigma.hat^2
+nloglik # Normal negative log-likelihood
+```
