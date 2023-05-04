@@ -130,3 +130,53 @@ mu.tilde = mu.hat + digamma(1) * sigma.tilde
 sigma.tilde
 mu.tilde
 ```
+
+Task 4
+
+```{r}
+# function to simulate from the Gumbel distribution
+# with the same sample size as s1 and mle estimates
+# for the parameters
+rgum = function(x) {
+  rgumbel(length(s1), loc = mu.hat2, scale = sigma.hat2)
+}
+
+# function to find the maximum likelihood
+# estimators
+fit.mle.gum = function(x) {
+  out = gumbel.fit1(x, start = c(50, 10))
+  out$estimate
+}
+
+# function to find the method of moments estimators
+fit.mom.gum = function(x) {
+  mu.hat = mean(x)
+  sigma.hat = sqrt(var(x) * (length(x) - 1)/length(x))
+  sigma.tilde = sqrt(6) * sigma.hat/pi
+  mu.tilde = mu.hat + digamma(1) * sigma.tilde
+  c(mu.tilde, sigma.tilde)
+}
+
+# simulate 1000 samples and obtain maximum
+# likelihood estimates and method of moments
+# estimates for each sample.
+mle.est = matrix(nrow = 1000, ncol = 2)
+mom.est = matrix(nrow = 1000, ncol = 2)
+for (i in 1:1000) {
+  x = rgum()
+  mle.est[i, ] = fit.mle.gum(x)
+  mom.est[i, ] = fit.mom.gum(x)
+}
+
+# means of estimators
+mean.mle.est = apply(mle.est, 2, mean)
+mean.mom.est = apply(mom.est, 2, mean)
+mean.mle.est
+mean.mom.est
+
+# SDs of estimators
+sd.mle.est = apply(mle.est, 2, sd)
+sd.mom.est = apply(mom.est, 2, sd)
+sd.mle.est
+sd.mom.est
+```
