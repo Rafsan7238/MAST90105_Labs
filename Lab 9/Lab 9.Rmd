@@ -25,3 +25,26 @@ n = length(s1)
 sigma.hat = sqrt((n - 1) * var(s1)/n)
 sigma.hat
 ```
+
+```{r}
+gumbel.fit1 = function(x, start = c(50, 10)) {
+  n = length(x)
+
+  likf = function(pr) {
+    mu = pr[1]
+    si = pr[2]
+  
+    if (si <= 0){
+      return(1e+100)
+    }
+  
+    sx = (x - mu)/si
+    # minimize negative log-likelihood
+    nloglik = n * log(si) + sum(sx) + sum(exp(-sx))
+    nloglik
+  }
+  
+  mle = nlm(likf, p = start)
+  mle
+}
+```

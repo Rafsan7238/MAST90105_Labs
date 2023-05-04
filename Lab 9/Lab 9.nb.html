@@ -1788,8 +1788,34 @@ sigma.hat</code></pre>
 <pre><code>[1] 16.04514</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuZ3VtYmVsLmZpdDEgPSBmdW5jdGlvbih4LCBzdGFydCA9IGMoNTAsIDEwKSkge1xuICBuID0gbGVuZ3RoKHgpXG5cbiAgbGlrZiA9IGZ1bmN0aW9uKHByKSB7XG4gICAgbXUgPSBwclsxXVxuICAgIHNpID0gcHJbMl1cbiAgXG4gICAgaWYgKHNpIDw9IDApe1xuICAgICAgcmV0dXJuKDFlKzEwMClcbiAgICB9XG4gIFxuICAgIHN4ID0gKHggLSBtdSkvc2lcbiAgICAjIG1pbmltaXplIG5lZ2F0aXZlIGxvZy1saWtlbGlob29kXG4gICAgbmxvZ2xpayA9IG4gKiBsb2coc2kpICsgc3VtKHN4KSArIHN1bShleHAoLXN4KSlcbiAgICBubG9nbGlrXG4gIH1cbiAgXG4gIG1sZSA9IG5sbShsaWtmLCBwID0gc3RhcnQpXG4gIG1sZVxufVxuYGBgIn0= -->
+<pre class="r"><code>gumbel.fit1 = function(x, start = c(50, 10)) {
+  n = length(x)
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnRhc21hbmlhID0gcmVhZC5jc3YoIkVkaXRlZFJhaW5mYWxsLmNzdiIpCmBgYAoKYGBge3J9CnMxID0gdGFzbWFuaWFbLCAyXSAKczIgPSB0YXNtYW5pYVssIDNdCmBgYAoKVGFzayAyCgpgYGB7cn0KbXUuaGF0ID0gbWVhbihzMSkKbXUuaGF0CgpuID0gbGVuZ3RoKHMxKQoKc2lnbWEuaGF0ID0gc3FydCgobiAtIDEpICogdmFyKHMxKS9uKQpzaWdtYS5oYXQKYGBgCg==</div>
+  likf = function(pr) {
+    mu = pr[1]
+    si = pr[2]
+  
+    if (si &lt;= 0){
+      return(1e+100)
+    }
+  
+    sx = (x - mu)/si
+    # minimize negative log-likelihood
+    nloglik = n * log(si) + sum(sx) + sum(exp(-sx))
+    nloglik
+  }
+  
+  mle = nlm(likf, p = start)
+  mle
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiTGFiIDkiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KClRhc2sgMQoKYGBge3J9CnRhc21hbmlhID0gcmVhZC5jc3YoIkVkaXRlZFJhaW5mYWxsLmNzdiIpCmBgYAoKYGBge3J9CnMxID0gdGFzbWFuaWFbLCAyXSAKczIgPSB0YXNtYW5pYVssIDNdCmBgYAoKVGFzayAyCgpgYGB7cn0KbXUuaGF0ID0gbWVhbihzMSkKbXUuaGF0CgpuID0gbGVuZ3RoKHMxKQoKc2lnbWEuaGF0ID0gc3FydCgobiAtIDEpICogdmFyKHMxKS9uKQpzaWdtYS5oYXQKYGBgCgpgYGB7cn0KZ3VtYmVsLmZpdDEgPSBmdW5jdGlvbih4LCBzdGFydCA9IGMoNTAsIDEwKSkgewogIG4gPSBsZW5ndGgoeCkKCiAgbGlrZiA9IGZ1bmN0aW9uKHByKSB7CiAgICBtdSA9IHByWzFdCiAgICBzaSA9IHByWzJdCiAgCiAgICBpZiAoc2kgPD0gMCl7CiAgICAgIHJldHVybigxZSsxMDApCiAgICB9CiAgCiAgICBzeCA9ICh4IC0gbXUpL3NpCiAgICAjIG1pbmltaXplIG5lZ2F0aXZlIGxvZy1saWtlbGlob29kCiAgICBubG9nbGlrID0gbiAqIGxvZyhzaSkgKyBzdW0oc3gpICsgc3VtKGV4cCgtc3gpKQogICAgbmxvZ2xpawogIH0KICAKICBtbGUgPSBubG0obGlrZiwgcCA9IHN0YXJ0KQogIG1sZQp9CmBgYAo=</div>
 
 
 
