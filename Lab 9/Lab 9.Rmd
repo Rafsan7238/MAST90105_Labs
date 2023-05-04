@@ -109,3 +109,7 @@ add = TRUE)
 curve(pdf2, from = 0, to = 100, col = 1, lty = 1, lwd = 2,
 add = TRUE)
 ```
+
+```{r}
+out1$minimum #Gumbel negative log-likelihood
+```
