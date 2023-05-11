@@ -15,3 +15,9 @@ Mozart = read_excel('/Users/rafsanalmamun/Desktop/MAST90105_Labs/Lab 10/Mozart.x
 a = Mozart[, 2]
 b = Mozart[, 1]
 ```
+
+```{r}
+Mozart = as.matrix(Mozart)
+a = Mozart[, 2]
+b = Mozart[, 1]
+```
