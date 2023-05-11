@@ -28,3 +28,16 @@ Task 1a
 total = a+b
 plot(a, total)
 ```
+
+Task 1b
+
+```{r}
+
+RegrM = lm(total ~ a)
+RegrM0 = lm(total ~ a - 1)
+
+plot(a, total)
+abline(RegrM, lty='dotted', col='red')
+abline(RegrM0, lty='dashed', col='green')
+
+```
