@@ -71,3 +71,15 @@ plot(b, a)
 RegrME = lm(a~b)
 summary(RegrME)
 ```
+
+```{r}
+RegrME0 = lm(a~0+b)
+summary(RegrME0)
+```
+
+```{r}
+
+plot(b, a)
+abline(RegrME, lty='dotted', col='red')
+abline(RegrME0, lty='dashed', col='green')
+```
