@@ -53,3 +53,10 @@ abline(RegrM0, lty='dashed', col='green')
 
 abline(a=0, b=phi, lty='dotdash', col='blue')
 ```
+
+Task 1d
+
+```{r}
+mean(total/a)
+phi
+```
