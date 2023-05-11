@@ -21,3 +21,10 @@ Mozart = as.matrix(Mozart)
 a = Mozart[, 2]
 b = Mozart[, 1]
 ```
+
+Task 1a
+
+```{r}
+total = a+b
+plot(a, total)
+```
