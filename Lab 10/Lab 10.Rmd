@@ -41,3 +41,15 @@ abline(RegrM, lty='dotted', col='red')
 abline(RegrM0, lty='dashed', col='green')
 
 ```
+
+Task 1c
+
+```{r}
+phi = (sqrt(5) + 1)/2
+
+plot(a, total)
+abline(RegrM, lty='dotted', col='red')
+abline(RegrM0, lty='dashed', col='green')
+
+abline(a=0, b=phi, lty='dotdash', col='blue')
+```
