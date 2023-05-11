@@ -60,3 +60,14 @@ Task 1d
 mean(total/a)
 phi
 ```
+
+Task 1e
+
+```{r}
+plot(b, a)
+```
+
+```{r}
+RegrME = lm(a~b)
+summary(RegrME)
+```
