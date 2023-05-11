@@ -88,3 +88,13 @@ abline(a=0, b=phi, lty='dotdash', col='blue')
 ```{r}
 mean(a/b)
 ```
+
+Task 1f
+
+```{r}
+diff = a + b - phi * a
+
+plot(a, RegrM$residuals, ylim=c(-15,20))
+points(a, RegrM0$residuals, col='green', pch=0)
+points(a, diff, col='red', pch=2)
+```
