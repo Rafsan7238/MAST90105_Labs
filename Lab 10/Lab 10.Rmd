@@ -7,3 +7,11 @@ output: html_notebook
 
 library(readxl)
 ```
+
+```{r}
+
+Mozart = read_excel('/Users/rafsanalmamun/Desktop/MAST90105_Labs/Lab 10/Mozart.xls')
+
+a = Mozart[, 2]
+b = Mozart[, 1]
+```
