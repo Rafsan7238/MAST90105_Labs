@@ -50,3 +50,17 @@ Posterior = p^675^ (1-p)^1149^ \* p^615^ (1-p)^1093^
 = p^1290^ (1-p)^2242^
 
 = Beta(a=1291, b=2243)
+
+**Task 2c**
+
+f(p) \~ U(0,1) \~ 1, 0\<p\<1
+
+Posterior = p^615^ (1-p)^1093^ \* 1
+
+= Beta(a=616, b=1094)
+
+```{r}
+
+curve(dbeta(x, 1291, 2243), from=0.3, to=0.4, ylab='posterior pdf')
+curve(dbeta(x, 616, 1094), from=0.3, to=0.4, add=TRUE, col='red', ylab='posterior pdf')
+```
