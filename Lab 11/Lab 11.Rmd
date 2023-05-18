@@ -74,3 +74,24 @@ qbeta(c(0.025, 0.975), 1291, 2243)
 ```{r}
 qbeta(c(0.025, 0.975), 616, 1094)
 ```
+
+**Task 2e**
+
+Posterior mean based on first data = 676/(676+1150)
+
+Pr(p\<0.5) = 0.99
+
+```{r}
+f2 = function(x){
+  return (pbeta(0.5, 676*x, 1150*x) - 0.99)
+}
+
+uniroot(f2, c(0, 1000))
+```
+
+```{r}
+676*0.043
+1150*0.043
+```
+
+Prior = Beta(a=29.068, beta=49.45)
