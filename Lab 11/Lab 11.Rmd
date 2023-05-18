@@ -28,3 +28,13 @@ abline(0,0) #includes a line at 0
 num = (C[, 1] < 0) & (C[, 2] > 0)
 sum(num)/nrow(C)
 ```
+
+**Task 2a**
+
+Prior, f(p) \~ U(0,1) \~ 1, 0\<p\<1
+
+Posterior = L(p) \* f(p)
+
+= p^675^ (1-p)^1149^ \* 1
+
+Posterior = Beta(a=676, b=1150)
