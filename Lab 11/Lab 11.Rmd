@@ -64,3 +64,13 @@ Posterior = p^615^ (1-p)^1093^ \* 1
 curve(dbeta(x, 1291, 2243), from=0.3, to=0.4, ylab='posterior pdf')
 curve(dbeta(x, 616, 1094), from=0.3, to=0.4, add=TRUE, col='red', ylab='posterior pdf')
 ```
+
+**Task 2d**
+
+```{r}
+qbeta(c(0.025, 0.975), 1291, 2243)
+```
+
+```{r}
+qbeta(c(0.025, 0.975), 616, 1094)
+```
