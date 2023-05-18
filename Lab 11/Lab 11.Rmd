@@ -1,0 +1,14 @@
+---
+title: "Lab 11"
+output: html_notebook
+---
+
+Task 1
+
+```{r}
+
+x = t.test(rnorm(10))
+x
+names(x)
+x$conf.int
+```
