@@ -12,3 +12,13 @@ x
 names(x)
 x$conf.int
 ```
+
+```{r}
+f=function(t){x=t.test(rnorm(t));as.vector(x$conf.int)};
+f(10);
+f(20);
+t <- as.matrix(rep(10,100));
+C <- t(apply(t,1,f)); #this is a trick so we don't have to program
+matplot(C,type="l"); #a matrix plot
+abline(0,0) #includes a line at 0
+```
